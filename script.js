@@ -1,7 +1,7 @@
 
 const addFunc = (x,y) =>{
-    if((x+y)/1===0){
-        return x+y
+    if((x+y)%1 === 0){
+        return (x+y).toFixed(0)
     }
     else{
         return (x+y).toFixed(2)
@@ -9,8 +9,8 @@ const addFunc = (x,y) =>{
 }
 
 const subtractFunc = (x,y) =>{
-    if((x-y)/1 === 0){
-        return (x-y)
+    if((x-y)%1 === 0){
+        return (x-y).toFixed(0)
     }
     else{
         return (x-y.toFixed(2))
@@ -19,8 +19,8 @@ const subtractFunc = (x,y) =>{
 
 
 const multiplyFunc = (x,y) =>{
-    if((x*y)/1 === 0){
-        return (x*y)
+    if((x*y)%1 === 0){
+        return (x*y).toFixed(0)
     }
     else{
         return (x*y).toFixed(2)
@@ -34,7 +34,7 @@ const divideFunc = (x,y) =>{
     }
     else{
          if((x/y)%1 === 0){
-            return (x/y);
+            return (x/y).toFixed(0);
         }
         else{
             return (x/y).toFixed(2)
@@ -56,6 +56,7 @@ const operateFunc = (x,y,operator) =>{
         return divideFunc(x,y);
     }
 };
+
 expression = "";
 expArray = [];
 
@@ -116,36 +117,87 @@ let chooseFunc = function(){
 
 let addToDisplay = (x) => screenDisplay.textContent += x;
 let clearDisplay = () => screenDisplay.textContent = "";
+let afterEquals = false;
 
 const number1 = document.querySelector('#one');
-number1.addEventListener("click",function(){addToDisplay('1')})
+number1.addEventListener("click",function(){
+    if(afterEquals===true){
+        clearDisplay()
+    };
+    afterEquals = false;
+    addToDisplay('1')})
 
 const number2 = document.querySelector('#two');
-number2.addEventListener("click",function(){addToDisplay('2')})
+number2.addEventListener("click",function(){
+    if(afterEquals===true){
+        clearDisplay()
+    };
+    afterEquals = false;
+    addToDisplay('2')})
 
 const number3 = document.querySelector('#three');
-number3.addEventListener("click",function(){addToDisplay('3')})
+number3.addEventListener("click",function(){
+    if(afterEquals===true){
+        clearDisplay()
+    };
+    afterEquals = false;
+    addToDisplay('3')})
 
 const number4 = document.querySelector('#four');
-number4.addEventListener("click",function(){addToDisplay('4')})
+number4.addEventListener("click",function(){
+    if(afterEquals===true){
+        clearDisplay()
+    };
+    afterEquals = false;
+    addToDisplay('4')})
 
 const number5 = document.querySelector('#five');
-number5.addEventListener("click",function(){addToDisplay('5')})
+number5.addEventListener("click",function(){
+    if(afterEquals===true){
+        clearDisplay()
+    };
+    afterEquals = false;
+    addToDisplay('5')})
 
 const number6 = document.querySelector('#six');
-number6.addEventListener("click",function(){addToDisplay('6')})
+number6.addEventListener("click",function(){
+    if(afterEquals===true){
+        clearDisplay()
+    };
+    afterEquals = false;
+    addToDisplay('6')})
 
 const number7 = document.querySelector('#seven');
-number7.addEventListener("click",function(){addToDisplay('7')})
+number7.addEventListener("click",function(){
+    if(afterEquals===true){
+        clearDisplay()
+    };
+    afterEquals = false;
+    addToDisplay('7')})
 
 const number8 = document.querySelector('#eight');
-number8.addEventListener("click",function(){addToDisplay('8')})
+number8.addEventListener("click",function(){
+    if(afterEquals===true){
+        clearDisplay()
+    };
+    afterEquals = false;
+    addToDisplay('8')})
 
 const number9 = document.querySelector('#nine');
-number9.addEventListener("click",function(){addToDisplay('9')})
+number9.addEventListener("click",function(){
+    if(afterEquals===true){
+        clearDisplay()
+    };
+    afterEquals = false;
+    addToDisplay('9')})
 
 const number0 = document.querySelector('#zero');
-number0.addEventListener("click",function(){addToDisplay('0')})
+number0.addEventListener("click",function(){
+    if(afterEquals===true){
+        clearDisplay()
+    };
+    afterEquals = false;
+    addToDisplay('0')})
 
 const divide = document.querySelector('#divide');
 divide.addEventListener("click",function(){
@@ -156,6 +208,7 @@ divide.addEventListener("click",function(){
     else{
         addToDisplay('/')
     }
+    afterEquals = false;
 })
 
 const multiply = document.querySelector('#multiply');
@@ -167,6 +220,7 @@ multiply.addEventListener("click",function(){
     else{
         addToDisplay('*')
     }
+    afterEquals = false;
 })
 
 const subtract = document.querySelector('#subtract');
@@ -178,6 +232,7 @@ subtract.addEventListener("click",function(){
     else{
         addToDisplay('-')
     }
+    afterEquals = false;
 })
 
 const add = document.querySelector('#add');
@@ -189,6 +244,7 @@ add.addEventListener("click",function(){
     else{
         addToDisplay('+')
     }
+    afterEquals = false;
 })
 
 const point = document.querySelector('#point');
@@ -202,6 +258,7 @@ clear.addEventListener("click",clearDisplay);
 const operate = document.querySelector('#operate');
 operate.addEventListener("click",function(){
     chooseFunc();
+    afterEquals = true;
 });
 
 
