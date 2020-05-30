@@ -1,0 +1,126 @@
+body,html {height:100%;overflow:hidden;}
+body {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: linear-gradient(to bottom, #0a3110 0%,#888787 100%);
+}
+
+.container{
+    width: 330px;
+    height: 477px;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 0;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgb(1, 180, 22);
+    border-radius: 10px;
+    background: rgb(34, 34, 36);
+    margin: 100px auto 0 auto;
+    
+}
+
+.display{
+    height: 80px;
+    width: 303px;
+    font-size: 25px;
+    margin-bottom: 5px;
+    background-color: rgb(27, 27, 27);
+    border: 1.5px solid rgb(1, 116, 15);
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    vertical-align: middle;
+    line-height: 80px;
+    text-align: left;
+    padding-left: 15px;
+    color: rgb(2, 204, 25);;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 7px;
+}
+
+.buttons-container{
+    width: 320px;
+    height: 320px;
+    flex-wrap: nowrap;  
+}
+
+.row{
+    height: 80px;
+    width: 335px;
+}
+
+button{
+    height: 80px;
+    width: 80px;
+    background:rgb(27,27,27);
+    color: rgb(2, 196, 24);
+    font-family: 'Orbitron', sans-serif;
+    font-size: large;
+    border: 1px solid rgb(1, 80, 10);
+}
+
+button:hover{
+    color: white;
+}
+
+button:active{
+    border: 1.5px solid rgb(255, 255, 255);
+}
+
+button:focus {outline: none;
+color:  yellow;}
+
+#divide,#subtract,#multiply,#add{
+    background-color: rgb(59, 55, 55);
+    color: white;
+}
+
+#operate{
+    background-color: rgb(3, 100, 14);
+    color: white;
+    font-size: 20px;
+}
+
+#point{
+    color: white;
+    font-size: 20px;
+}
+
+#operate:hover{
+    background-color: rgb(90, 90, 90);
+    color: rgb(2, 196, 24);
+    font-size: 20px;
+}
+
+#divide:hover,#multiply:hover,#subtract:hover,#add:hover,#point:hover{
+    color: rgb(2, 196, 24);
+}
+
+#subtract:active,#add:active,#operate:active,#point:active,#multiply:active#divide:active{
+    border: 2px solid rgb(5, 207, 28);
+}
+
+#add:focus,#divide:focus,#multiply:focus,#operate:focus,#subtract:focus,#point:focus {outline: none;
+    color:  yellow;}
+
+.clear{
+    height: 50px;
+    width: 320px;
+    font-size: 10px;
+    margin-bottom: 5px;
+    background-color: rgb(27, 27, 27);
+    border: 1.5px solid rgb(1, 116, 15);
+    vertical-align: middle;
+    line-height: 20px;
+    text-align: center;
+    padding-left: 15px;
+    color: rgb(2, 204, 25);;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 7px;
+    font-weight: bolder;
+    margin-top: 7px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
